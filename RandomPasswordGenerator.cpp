@@ -40,7 +40,7 @@ std::string RandomPasswordGenerator::GenPassword(const size_t& length, const boo
 
 	return pass;
 }
-std::string RandomPasswordGenerator::GetAllUpperChars()
+std::string RandomPasswordGenerator::GetAllUpperChars() noexcept
 {
 	std::string upper;
 	
@@ -50,7 +50,7 @@ std::string RandomPasswordGenerator::GetAllUpperChars()
 	}
 	return upper;
 }
-std::string RandomPasswordGenerator::GetAllLowerChars()
+std::string RandomPasswordGenerator::GetAllLowerChars() noexcept
 {
 	std::string lower;
 	for (unsigned char i = 'a'; i <= 'z'; i++)

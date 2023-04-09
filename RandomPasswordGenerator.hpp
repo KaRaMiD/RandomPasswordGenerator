@@ -14,11 +14,11 @@ public:
 	static std::string GenPassword(const size_t& length, const bool& useSpecialChars = false, const bool& useChars = true,
 		const bool& useNumbers = true, bool useUpperChars = true, bool useLowerChars = true);
 private:
-	static std::string GetAllUpperChars();
-	static std::string GetAllLowerChars();
+	static std::string GetAllUpperChars() noexcept;
+	static std::string GetAllLowerChars() noexcept;
 
 	template<class F>
-	static void DeleteFalseBools(std::unordered_map<F, bool>& bools)
+	static void DeleteFalseBools(std::unordered_map<F, bool>& bools) noexcept
 	{
 		for (auto it = bools.begin(); it != bools.end();)
 		{
